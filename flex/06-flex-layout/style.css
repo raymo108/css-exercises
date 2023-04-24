@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
+  /* this height value makes the body exactly same height as viewport */
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  /*  allows pushing the footer down to bottom of page */
+  flex-direction: column;
 }
 
 img {
@@ -24,4 +28,65 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+.header {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  /* make the footers margin fill the remaining space between it and it's previous sibling. Push the footer to bottom of the page */
+  margin-top: auto;
+  background-color: #eeeeee;
+  
+}
+
+.left-links {
+  display: flex;
+  gap: 12px;
+  
+}
+
+.right-links {
+  display: flex;
+  gap: 12px;
+}
+
+.content {
+  margin: auto;
+  align-self: center;
+}
+
+.input{
+  display: flex;
+  justify-content: center;
+  
+}
+
+ .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  
+}
+
+button {
+  padding: 10px;
+}
+
+
+ul {
+  /* this removes the dots on the list items*/
+  list-style-type: none;
+}
+
+a {
+  /* this removes the line under the links */
+  text-decoration: none;
+  
 }
